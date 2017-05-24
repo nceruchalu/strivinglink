@@ -1,0 +1,87 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// app.scss
+//
+// In this file you should write your main styles. (or centralize your imports)
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Core variables and mixins
+@import "base";
+@import "variables";
+@import "zindex";
+@import "mixins/buttons";
+
+// Reset and dependencies
+@import "reset";
+@import "normalize";
+@import "error";
+
+// Slimmed version of bootstrap
+@import "bootstrap";
+
+@import "buttons";
+@import "flip";
+@import "footer";
+@import "home";
+@import "navigation";
+
+body {
+    background-color: #fff;
+    color: $color-black;
+    font-family: $fontFamily-sans;
+    font-weight: $fontWeight-normal;
+    font-size: $fontSize-base;
+    line-height: $lineHeight-base;
+}
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+
+// Links
+a {
+    color: $color-blue;
+}
+
+a:hover {
+    color: $color-blueDark;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+// Images
+img {
+    display: block;
+    max-width: 100%;
+    outline: none;
+    vertical-align: middle;
+    height: auto;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+

@@ -1,0 +1,364 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// _home.scss
+//
+// Use this partial to style the home page
+//
+////////////////////////////////////////////////////////////////////////////////
+
+section {
+    @include transition(height 0.5s);
+    position: relative
+}
+
+section.is-dark {
+    background-color: #f9f9f9;
+}
+
+section.is-light {
+    background-color: #fdfdfd;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: $fontWeight-normal;
+    line-height: 48px;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+p {
+    font-size: $fontSize-base;
+    font-weight: $fontWeight-normal;
+}
+
+section h2 {
+    color: $color-grayLight;
+    font-size: $fontSize-smaller;
+    font-weight: $fontWeight-medium;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin: 90px 0 40px;
+}
+
+section h3 {
+    font-size: 56px;
+    font-weight: $fontWeight-medium;
+    line-height: 1.5;
+    margin: 0 0 40px;
+}
+
+section h4 {
+    font-size: 24px;
+    font-weight: $fontWeight-normal;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+section p {
+    color: $color-gray;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    section header {
+        width: 75%;
+        max-width: $maxWidth-content--small;
+    }
+}
+
+@media (max-width: 767px) {
+    section h2 {
+        margin: 35px 0 24px;
+    }
+
+    section h3 {
+        font-size: 36px;
+        margin: 0 0 24px;
+    }
+}
+
+// Equal height columns
+@media (min-width: 768px) {
+    .row--equalHeights {
+        @include display-flex;
+        @include flex-wrap(wrap);
+    }
+
+    .row--equalHeights > [class*='col-'] {
+        @include display-flex;
+    }
+}
+
+
+// Card layout
+section ol {
+    margin-bottom: 40px;
+}
+
+section .card {
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    padding: 30px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    section ol {
+        margin-bottom: 28px;
+    }
+    
+    section .card {
+        margin-bottom: 12px;
+        padding: 24px;
+    }
+}
+
+
+// Pitch section
+section.pitch {
+    overflow: hidden;
+    height: 768px;
+}
+
+section.pitch .background {
+    @include transform(translate(-50%, -50%));
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: $zIndex-1;
+}
+
+section.pitch .background--small {
+    @include filter(blur(10px));
+}
+
+section.pitch .background--large {
+    @include transition(all 0.5s);
+    @include opacity(0);
+}
+
+section.pitch .background.is-loaded {
+    @include opacity(1);
+    z-index: $zIndex-2;
+}
+
+section.pitch:before {
+    @include opacity(0.8);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.62), #000);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: $zIndex-3;
+}
+
+section.pitch .container {
+    height: 100%;
+}
+
+section.pitch .content {
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(center);
+    color: #ffffff;
+    height: 100%;
+    position: relative;
+    z-index: $zIndex-5;
+}
+
+section.pitch p {
+    color: inherit;
+    margin-bottom: 30px;
+}
+
+section.pitch .btn-group {
+    @include display-flex;
+    @include flex-direction(column);
+}
+
+section.pitch .btn {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section.pitch .btn-group .btn:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+section.pitch h4 {
+    font-size: $fontSize-smaller;
+    margin-bottom: 16px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+section.pitch .clients-list ul {
+    @include align-items(centers);
+    @include display-flex;
+    @include flex-wrap(wrap);
+    margin-bottom: 30px;
+}
+
+section.pitch .clients-list li {
+    @include opacity(0.8);
+    color: #ffffff;
+    line-height: 0;
+}
+
+section.pitch .clients-list li:not(:last-child) {
+    margin-right: 30px;
+}
+
+section.pitch .clients-list li img {
+    height: 56px;
+}
+
+
+@media (min-width: 768px) {
+    section.pitch .content {
+        float: left;
+        width: 75%;
+        max-width: $maxWidth-content--small;
+    }
+
+    section.pitch h1 {
+        font-size: 56px;
+        line-height: 84px;
+        margin-bottom: 29px;
+    }
+
+    section.pitch p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    section.pitch .btn-group {
+        @include flex-direction(row)
+    }
+
+    section.pitch .btn-group .btn:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
+
+    section.pitch .clients-list {
+        bottom: 0;
+        left: 0;
+        margin-bottom: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    section.pitch {
+        height: auto;
+    }
+
+    section.pitch h1 {
+        margin-top: 120px;
+    }
+}
+
+
+// Approach section
+section.approach .card {
+    box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, 0.16);
+}
+
+@media (min-width: 768px) {
+    section.approach ol li {
+        width: 75%;
+        max-width: $maxWidth-content--small;
+    }
+}
+
+
+// Services section
+section.services .card {
+    @include border-radius($borderRadius-base);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+}
+
+
+// Cases section
+section.cases .card {
+    @include display-flex;
+    @include flex-direction(column);
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+section.cases .card h4 {
+    font-size: 21px;
+    margin: 30px 30px 8px;
+}
+
+section.cases .figure {
+    background-color: #ebebeb;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+}
+
+section.cases .figure:after {
+    content: '';
+    display: block;
+    padding-top: 75%;
+    position: relative;
+}
+
+section.cases .figure img {
+    max-width: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+section.cases .card p {
+    margin: 0 30px 30px;
+}
+
+section.cases .card ul {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin: auto 30px 16px;
+    text-transform: uppercase;
+}
+
+section.cases .card ul:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+section.cases .card ul > li {
+    color: rgba(0, 0, 0, 0.4);
+    float: left;
+    font-size: $fontSize-smaller;
+    font-weight: $fontWeight-medium;
+    line-height: 40px;
+    letter-spacing: 1px;
+    padding-right: 16px;
+}
+
+@media (max-width: 767px) {
+    
+    section.cases .card h4 {
+        margin: 24px 24px 8px;
+    }
+
+    section.cases .card p {
+        margin: 0 24px 24px;
+    }
+
+    section.cases .card ul {
+        margin: auto 24px 16px;
+    }
+}

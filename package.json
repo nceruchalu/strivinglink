@@ -1,0 +1,32 @@
+{
+  "name": "strivinglink",
+  "version": "0.0.0",
+  "description": "String Link Ltd's website",
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "repository": "",
+  "scripts": {
+    "build": "ember build",
+    "start": "broccoli serve"
+  },
+  "devDependencies": {
+    "broccoli": "^1.1.2",
+    "broccoli-asset-rev": "^2.5.0",
+    "broccoli-bower": "^0.2.1",
+    "broccoli-compass-compiler": "0.0.6",
+    "broccoli-concat": "^3.2.2",
+    "broccoli-env": "0.0.1",
+    "broccoli-funnel": "^1.2.0",
+    "broccoli-handlebars": "^1.0.0",
+    "broccoli-merge-trees": "^2.0.0",
+    "broccoli-uglify-sourcemap": "^1.5.2"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "private": true
+}

@@ -1,0 +1,13 @@
+# redirect www to non-www
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Remove file extensions so /about.html can load at /about
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Show custom error pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html

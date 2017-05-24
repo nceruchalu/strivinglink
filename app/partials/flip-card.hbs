@@ -1,0 +1,33 @@
+{{!-- partial for the flipping card used for showcasing projects --}}
+<li class="col-sm-6 col-md-4 flip-container">
+  <div class="flipper">
+    <div class="flip-front card">
+      <!-- front content -->
+      <div class="figure">
+        {{# if image}}
+          <img alt="{{title}}" src="/assets/img/projects/{{image}}">
+        {{/if}}
+      </div>
+      <h4>{{title}}</h4>
+      <p>{{summary}}</p>
+      <ul>
+        {{#if ios}}<li>iOS</li>{{/if}}
+        {{#if web}}<li>Web</li>{{/if}}
+        {{#if backend}}<li>Back-end</li>{{/if}}
+        {{#if hardware}}<li>Hardware</li>{{/if}}
+      </ul>
+    </div> <!-- /.flip-front -->
+    <div class="flip-back card">
+      <!-- back content -->
+      <h4>{{title}}</h4>
+      {{#if details}}
+        <p>{{details}}</p>
+      {{else}}
+        {{> @partial-block }}
+      {{/if}}
+      <ul>
+        <li><a href="{{url}}" title="{{urlText}}">{{urlText}}</a></li>
+      </ul>
+    </div> <!-- /.flip-back -->
+  </div>
+</li>

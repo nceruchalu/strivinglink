@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// _flip.scss
+//
+// Use this partial to implement CSS flipping animations
+// @ref https://davidwalsh.name/css-flip
+//
+////////////////////////////////////////////////////////////////////////////////
+
+/* entire container, keeps perspective */
+.flip-container {
+    @include perspective(1000px);
+    @include transform-style(preserve-3d);
+}
+
+/*  flip the pane when the 'is-flipped' is toggled */
+.flip-container.is-flipped .flip-back {
+    @include transform(rotateY(0deg));
+}
+.flip-container.is-flipped .flip-front {
+    @include transform(rotateY(180deg));
+}
+
+/* flip speed goes here */
+.flipper {
+    @include display-flex;
+    @include transform-style(preserve-3d);
+    @include transition(0.6s);
+    position: relative;
+    width: 100%;
+}
+
+/* hide back of pane during swap */
+.flip-front,
+.flip-back {
+    @include backface-visibility(hidden);
+    @include transform-style(preserve-3d);
+    @include transition(0.6s);
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+/* front pane, placed above back */
+.flip-front {
+    /* for firefox 31 */
+    @include transform(rotateY(0deg));
+    z-index: $zIndex-2;
+}
+
+/* back, initially hidden pane */
+.flip-back {
+    @include transform(rotateY(-180deg));
+    margin-left: -100%;
+}

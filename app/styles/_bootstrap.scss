@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// _bootstrap.scss
+//
+// Use this partial to include the bootstrap components of interest
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Core CSS
+@import "bootstrap/grid";
+
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";

@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// _footersscss
+//
+// Use this partial to style the footer classes
+//
+////////////////////////////////////////////////////////////////////////////////
+
+footer {
+    background-color: #f5f5f5;
+    padding-bottom: 66px;
+    padding-top: 74px;
+}
+
+footer .logo--type {
+    margin-bottom: 64px;
+}
+
+footer .contact-details {
+    margin-bottom: 96px;
+}
+
+footer .contact-details h4 {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 13px;
+    font-weight: $fontWeight-medium;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+footer .contact-details p {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 18px;
+    font-weight: $fontWeight-normal;
+    line-height: 1.5;
+}
+
+footer .copyright {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 13px;
+    font-weight: $fontWeight-medium;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+
+@media (max-width:767px) {
+    footer {
+        padding-bottom: 48px;
+        padding-top: 32px;
+    }
+
+    footer .logo--type {
+        margin-bottom: 16px;
+    }
+
+    footer .contact-details {
+        margin-bottom: 48px;
+    }
+
+    footer .contact-details > div:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}

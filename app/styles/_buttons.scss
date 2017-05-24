@@ -1,0 +1,137 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// _buttons.scss
+//
+// Use this partial to style the button classes
+//
+////////////////////////////////////////////////////////////////////////////////
+
+.btn {
+    @include button-size($padding-base--vertical, 
+                         $padding-base--horizontal, 
+                         $fontSize-base,
+                         $lineHeight-base,
+                         $borderRadius-base);
+    @include user-select(none);
+    background-image: none;
+    color: $color-blue;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $fontSize-base;
+    font-weight: $fontWeight-normal;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn.active.focus, 
+.btn.active:focus, 
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus, 
+.btn:focus {
+    outline: none;
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+    color: $color-blueDark;
+}
+
+.btn.active, 
+.btn:active {
+    @include box-shadow(none);    
+}
+
+
+/**
+ * Custom button variants
+ */
+.btn--bordered {
+    @include border-radius($default-border-radius);
+    background-color: transparent;
+    border: 1px solid $color-blue;
+    font-size: $fontSize-base;
+    font-weight: $fontWeight-normal;
+    padding: 7px 16px;
+    text-decoration: none;
+}
+
+.btn--bordered:hover {
+    border-color: $color-blueDark;
+    color: $color-blueDark;
+}
+
+.btn--primary {
+    @include button-variant(#fff, $color-blue, $color-blue);
+}
+
+.btn--white {
+    @include button-variant($color-blue, white, white);
+}
+
+.btn--primaryLight {
+    @include button-variant(#fff, $color-blueLight, $color-blue);
+}
+
+.btn--plain {
+    @include button-variant($color-gray, #fff, $color-grayLighter);
+}
+
+.btn--plain:focus,
+.btn--plain.focus,
+.btn--plain:hover,
+.btn--plain.hover {
+    background-color: #fff;
+    border-color: $color-blue;
+    color: $color-blue;
+}
+
+.btn--plain:active:focus,
+.btn--plain:active:hover {
+    background-color: #fff;
+    border-color: $color-blueDark;
+    color: $color-blueDark;
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn--lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large--vertical, 
+                       $padding-large--horizontal, 
+                       $fontSize-medium--small, 
+                       $lineHeight-tight,
+                       $borderRadius-small);
+  font-weight: $fontWeight-medium;
+}
+
+.btn--md {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small--vertical, 
+                       $padding-small--horizontal, 
+                       $fontSize-medium--small,
+                       $lineHeight-loose, 
+                       $borderRadius-small);
+}
+
+.btn--sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small--vertical, 
+                       $padding-small--horizontal, 
+                       $fontSize-small,
+                       $lineHeight-loose, 
+                       $borderRadius-small);
+}
+
+.btn--xs {
+  @include button-size($padding-xs--vertical, 
+                       $padding-xs--horizontal, 
+                       $fontSize-smaller, 
+                       $lineHeight-loose, 
+                       $borderRadius-small);
+}

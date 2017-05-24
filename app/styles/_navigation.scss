@@ -1,0 +1,219 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// _navigation.scss
+//
+// Use this partial to style the navigation classes
+//
+////////////////////////////////////////////////////////////////////////////////
+
+body[data-spy="scroll"] {
+    position: relative; // required for scrollspy
+}
+
+.navbar-default {
+    @include transition(background 0.5s);
+    background-color: #ffffff;
+    border: 0;
+}
+
+.navbar-default.affix-top {
+    background-color: transparent;
+}
+
+.navbar-default > .container {
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.navbar-default .navbar-brand,
+.logo--type, {
+    @include transition (color 0.5s);
+    @include user-select(none);
+    color: $color-black;
+    font-size: 19px;
+    font-weight: $fontWeight-bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar-default.affix-top .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-brand .logo-highlight,
+.logo--type .logo-highlight, {
+    @include border-radius($borderRadius-small);
+    background-color: rgba(0, 0, 0, 0.08);
+    bottom: 2px;
+    color: #5e5e5e;
+    font-size: 13px;
+    font-weight: $fontWeight-bold;
+    padding: 3px 6px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.navbar-default.affix-top .navbar-brand .logo-highlight {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.navbar-default .navbar-nav > li > a {
+    @include transition(border 0.5s, color 0.5s);
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    color: $color-grayLight;
+    font-size: 12.5px;
+    font-weight: $fontWeight-bold;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: $color-grayLight;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    border-bottom-color: $color-grayLighter;
+}
+
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    border-bottom-color: $color-blue;
+    color: $color-blue;
+}
+
+.affix-top .navbar-nav > .active > a {
+    border-bottom-color: transparent;
+    color: $color-grayLight;
+}
+
+.affix-top .navbar-nav > .active > a:hover,
+.affix-top .navbar-nav > .active > a:focus {
+    border-bottom-color: $color-grayLight;
+    color: $color-grayLight;
+}
+
+
+.navbar-default .navbar-button {
+    @include border-radius($borderRadius-base);
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.16);
+    margin-left: 10px;
+}
+
+.navbar-default.affix-top .navbar-nav > li > a.navbar-button {
+    @include transition(box-shadow 0.5s, background 0.5s);
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.navbar-default .navbar-nav > li > a.navbar-button:hover {
+    border: 0;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.16);
+}
+
+.navbar-default.affix-top .navbar-nav > li > a.navbar-button:hover {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.navbar-default .navbar-nav > li > a.navbar-button,
+.navbar-default .navbar-nav > .active > a.navbar-button {
+    background-color: $color-blue;
+    border: 0;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a.navbar-button:hover,
+.navbar-default .navbar-nav > li > a.navbar-button:focus {
+    background-color: $color-blueLight;
+    border: 0;
+    box-shadow: none;
+}
+
+.navbar-default.affix-top .navbar-nav > li > a.navbar-button:hover,
+.navbar-default.affix-top .navbar-nav > li > a.navbar-button:focus {
+    background-color: transparent;
+}
+
+
+.navbar-default .navbar-toggle {
+    @include border-radius(50%);
+    border: none;
+    cursor: pointer;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    padding: 13px 10px;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.navbar-default.affix-top .navbar-toggle:hover,
+.navbar-default.affix-top .navbar-toggle:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width:767px) {
+    .navbar-default {
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .navbar-default.affix-top {
+        border-bottom: none;
+    }
+    
+    .navbar-collapse {
+        background: #ffffff;
+    }
+    .navbar-nav {
+        margin: 7.5px 15px;
+        text-align: center;
+    }
+
+    .navbar-default .navbar-nav > li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    
+    .navbar-default .navbar-nav > li > a {
+        border-bottom-color: transparent;
+    }
+
+    .navbar-default .navbar-nav > .active > a {
+        border-bottom-color: transparent;
+    }
+
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus,
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+        border-bottom-color: $color-grayLighter;
+    }
+
+    .navbar-default .navbar-nav > li > a.navbar-button,
+    .navbar-default.affix-top .navbar-nav > li > a.navbar-button {
+        background-color: $color-blue;
+        border: 0 !important;
+        box-shadow: none !important;
+        color: #ffffff;
+        margin-left: 0;
+        padding-bottom: $padding-large--vertical;
+        padding-top: $padding-large--vertical;
+    }
+
+    .navbar-default .navbar-nav > li > a.navbar-button:hover {
+        background-color: $color-blueLight;
+        border: 0;
+    }
+
+    .navbar-default .navbar-collapse {
+        background-color: #fff;
+        margin-top: 10px;
+    }
+}
