@@ -89,6 +89,10 @@ section p {
     .row--equalHeights > [class*='col-'] {
         @include display-flex;
     }
+
+    .row--equalHeights:before, .row--equalHeights:after {
+        @include display-flex;
+    }
 }
 
 
