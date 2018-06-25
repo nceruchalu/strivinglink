@@ -14,16 +14,16 @@
     "start": "broccoli serve"
   },
   "devDependencies": {
-    "broccoli": "^1.1.2",
-    "broccoli-asset-rev": "^2.5.0",
+    "broccoli": "^1.1.4",
+    "broccoli-asset-rev": "^2.7.0",
     "broccoli-bower": "^0.2.1",
     "broccoli-compass-compiler": "0.0.6",
     "broccoli-concat": "^3.2.2",
     "broccoli-env": "0.0.1",
-    "broccoli-funnel": "^1.2.0",
-    "broccoli-handlebars": "^1.0.0",
-    "broccoli-merge-trees": "^2.0.0",
-    "broccoli-uglify-sourcemap": "^1.5.2"
+    "broccoli-funnel": "^2.0.1",
+    "broccoli-handlebars": "^1.0.1",
+    "broccoli-merge-trees": "^3.0.0",
+    "broccoli-uglify-sourcemap": "^2.2.0"
   },
   "engines": {
     "node": ">= 4"

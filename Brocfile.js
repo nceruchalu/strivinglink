@@ -51,7 +51,7 @@ appAndDependencies = new mergeTrees(
 // Concatenate and compress all of our JavaScript files in the project /app
 // and /vendor folder into a single app.js file in the assets folder
 var appJs = concat(appAndDependencies, {
-    headerFiles: ['jquery-3.2.1.slim.min.js', 'transition.js'],
+    headerFiles: ['jquery-3.3.1.slim.min.js', 'transition.js'],
     inputFiles : ['*.js'],
     footerFiles: ['app.js'],
     outputFile : '/assets/app.js',
