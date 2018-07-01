@@ -1,11 +1,11 @@
 # strivinglink
 
 ## About strivinglink.com
-|         |                                                    |
-| ------- | -------------------------------------------------- |
-| Author  | Nnoduka Eruchalu                                   |
-| Date    | 05/21/2017                                         |
-| Website | [http://strivinglink.com](http://strivinglink.com) |
+|         |                                                      |
+| ------- | ---------------------------------------------------- |
+| Author  | Nnoduka Eruchalu                                     |
+| Date    | 05/21/2017                                           |
+| Website | [https://strivinglink.com](https://strivinglink.com) |
 
 This is Striving Link Ltd's website.
 
